@@ -14,80 +14,7 @@ window.randomScalingFactor = function() {
 
 var lineChartData = {
 	labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-	datasets: [
-		{
-			label: 'Dataset 1',
-			backgroundColor: window.chartColors.red,
-			data: [
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor()
-			]
-		},
-		{
-			label: 'Dataset 2',
-			backgroundColor: window.chartColors.green,
-			data: [
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor()
-			]
-		},
-		{
-			label: 'Dataset 3',
-			backgroundColor: window.chartColors.yellow,
-			data: [
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor()
-			]
-		},
-		{
-			label: 'Dataset 4',
-			backgroundColor: window.chartColors.blue,
-			data: [
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor()
-			]
-		},
-	]
+	datasets: []
 };
 
 window.onload = function() {
@@ -121,16 +48,6 @@ window.onload = function() {
                 }]
             }
 		}
-	});
-
-
-	document.getElementById('randomizeData').addEventListener('click', function() {
-        lineChartData.datasets.forEach(function(dataset, i) {
-            dataset.data = dataset.data.map(function() {
-                return randomScalingFactor();
-            });
-        });
-        window.myLine.update();
 	});
 };
 
